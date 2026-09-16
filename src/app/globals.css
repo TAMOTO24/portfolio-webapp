@@ -15,6 +15,11 @@ html {
   height: 100%;
 }
 
+.centerBlock {
+  display: flex;
+  align-items: center;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -43,8 +48,30 @@ a {
   text-decoration: none;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: scroll 15s linear infinite;
+}
+
+.carousel-image {
+  object-fit: cover;
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-} */
+
+  to {
+    transform: translateX(-33.33%);
+  }
+}

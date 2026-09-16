@@ -13,23 +13,27 @@ export default function Header() {
       style={{
         backgroundColor: "var(--block)",
         marginInline: "10%",
-        padding: "1rem",
         borderRadius: "0 0 1rem 1rem",
+        fontFamily: "var(--font-plex-mono)",
       }}
     >
       <nav
         style={{
           display: "flex",
-          gap: "1rem",
+          gap: "5rem",
           padding: "1rem",
+          alignItems: "center",
           justifyContent: "center",
         }}
       >
         {pages.map((page) => (
-          <Link key={page.label} href={page.to}>
+          <Link key={page.label} style={{ fontSize: "1.25rem" }} href={page.to}>
             {page.label}
           </Link>
         ))}
+        <div>
+          <img src="/icons/github.png" alt="GitHub" width={50} height={50} />
+        </div>
       </nav>
     </header>
   );
