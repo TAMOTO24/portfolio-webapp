@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
   const pages: { to: string; label: string }[] = [
     { to: "/", label: "Home" },
     { to: "/case-studies", label: "Case Studies" },
@@ -27,7 +29,12 @@ export default function Header() {
         }}
       >
         {pages.map((page) => (
-          <Link key={page.label} style={{ fontSize: "1.25rem" }} href={page.to}>
+          <Link
+            key={page.label}
+            style={{ fontSize: "1.25rem" }}
+            className={pathname === page.to ? "selected" : undefined}
+            href={page.to}
+          >
             {page.label}
           </Link>
         ))}

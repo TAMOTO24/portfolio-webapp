@@ -18,6 +18,12 @@ export default function Page() {
     { color: "#EC4899", label: "Python", icon: "/icons/python.png" },
   ];
 
+  const title: { icon: string; label: string }[] = [
+    { icon: "/icons/pin.png", label: "Based In Ukraine" },
+    { icon: "/icons/code.png", label: "Available for Remote Work" },
+    { icon: "/icons/brain.png", label: "Open to New Opportunities" },
+  ];
+
   const carouselImages: string[] = [
     "/icons/react.png",
     "/icons/pygame.png",
@@ -28,7 +34,7 @@ export default function Page() {
     "/icons/elevenlabs.png",
   ];
   return (
-    <div style={{ marginInline: "15%", marginTop: "5%" }}>
+    <div style={{ marginInline: "10%", marginTop: "5%" }}>
       <div
         style={{
           gap: "5rem",
@@ -38,6 +44,11 @@ export default function Page() {
         className="centerBlock"
       >
         <div>
+          <p
+            style={{ fontFamily: "var(--font-plex-mono)", color: "whitesmoke" }}
+          >
+            AI CREATOR & FULL-STACK DEVELOPER
+          </p>
           <h1
             style={{
               fontSize: "4rem",
@@ -49,15 +60,14 @@ export default function Page() {
           </h1>
           <p
             style={{
-              fontSize: "1.5rem",
+              fontSize: "1.25rem",
               marginBottom: "2rem",
               fontFamily: "var(--font-plex-mono)",
             }}
           >
-            Full Stack & Game Developer ⚙️ MERN (MongoDB, Express, React,
-            Node.js) | C++ | Python Pygame | TypeScript 🎮Passionate about web
-            apps, games and other software development. Always eager to learn
-            new technologies and improve my skills.
+            I create websites, AI-powered products, animations and digital
+            experiences. Passionate about new technologies and always aeger to
+            learn and improve my skills.
           </p>
 
           <div>
@@ -80,24 +90,67 @@ export default function Page() {
             ))}
           </div>
         </div>
-        <img
-          src="/photo/facePic.jpg"
-          width={450}
-          height={450}
-          style={{ borderRadius: "50%" }}
-          alt="My Photo"
-        />{" "}
+        <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
+          <img
+            src="/photo/facePic.jpg"
+            width={450}
+            height={450}
+            style={{
+              borderRadius: "50%",
+              boxShadow: "0 0 100px rgba(140, 60, 255, 0.35)",
+            }}
+            alt="My Photo"
+          />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "1rem",
+            }}
+          >
+            {title.map((item) => (
+              <div
+                key={item.label}
+                style={{
+                  fontFamily: "var(--font-plex-mono)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                  }}
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.label}
+                    width={30}
+                    height={30}
+                  />
+                  <p>{item.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
       <div>
         <div
           style={{
             fontSize: "1.25rem",
+            marginTop: "10rem",
             color: "whitesmoke",
             fontFamily: "var(--font-plex-mono)",
             marginBottom: "1rem",
           }}
         >
-          Worked with
+          Tech stack
         </div>
         <div className="carousel">
           <div className="carousel-track">

@@ -1,7 +1,8 @@
 :root {
-  --background: #080808;
-  --foreground: #9C9C9C;
-  --block: #1B1B1B;
+  --blackTheme: linear-gradient(to bottom, #080808, #1a1025);
+  --whiteTheme: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  --foreground: #9c9c9c;
+  --block: #1b1b1b;
 }
 /* 
 @media (prefers-color-scheme: dark) {
@@ -10,6 +11,11 @@
     --foreground: #ededed;
   }
 } */
+
+.selected {
+  color: #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
 
 html {
   height: 100%;
@@ -31,10 +37,20 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background: var(--background);
+  background: var(--blackTheme);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.light-page {
+  color: #000;
+  background: var(--whiteTheme);
+}
+
+.dark-page {
+  color: #fff;
+  background: var(--blackTheme);
 }
 
 * {
@@ -57,7 +73,7 @@ a {
   display: flex;
   width: max-content;
   gap: 1rem;
-  animation: scroll 15s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .carousel-image {
@@ -75,3 +91,4 @@ a {
     transform: translateX(-33.33%);
   }
 }
+
