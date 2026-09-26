@@ -37,10 +37,80 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background: var(--blackTheme);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background: #080808;
+  color: whitesmoke;
+  font-family: Arial, sans-serif;
+
+  background-image:
+    /* Световые пятна */
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.05),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(120, 120, 140, 0.06),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(150, 150, 170, 0.04),
+      transparent 25%
+    ),
+
+    /* Сетка */
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    60px 60px,
+    60px 60px;
+
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+
+  background-attachment: fixed;
+
+  animation: backgroundMove 1s linear infinite;
+}
+
+@keyframes backgroundMove {
+  from {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+
+  to {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      60px 60px,
+      60px 60px;
+  }
 }
 
 .light-page {
@@ -91,4 +161,3 @@ a {
     transform: translateX(-33.33%);
   }
 }
-

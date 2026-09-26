@@ -70,7 +70,7 @@ export default function CaseStudies() {
       }}
     >
       <section style={{ marginBottom: "6rem" }}>
-        <div
+        {/* <div
           style={{
             fontFamily: "var(--font-plex-mono)",
             fontSize: "0.8rem",
@@ -79,7 +79,7 @@ export default function CaseStudies() {
           }}
         >
           /case-studies
-        </div>
+        </div> */}
 
         <h1
           style={{

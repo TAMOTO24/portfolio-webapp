@@ -6,7 +6,6 @@ export default function Header() {
   const pages: { to: string; label: string }[] = [
     { to: "/", label: "Home" },
     { to: "/case-studies", label: "Case Studies" },
-    { to: "/recent-work", label: "Recent Work" },
     { to: "/get-in-touch", label: "Get in Touch" },
   ];
 
