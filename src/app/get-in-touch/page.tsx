@@ -1,11 +1,45 @@
+"use client";
+import sendEMail from "../action/mailer";
+
 export default function GetInTouch() {
   const socials: { icon: string; name: string; link: string }[] = [
     { icon: "/icons/facebook.png", name: "Facebook", link: "#" },
-    { icon: "/icons/instagram.png", name: "Instagram", link: "#" },
-    { icon: "/icons/linkedin.png", name: "LinkedIn", link: "#" },
-    { icon: "/icons/telegram.png", name: "Telegram", link: "#" },
+    {
+      icon: "/icons/instagram.png",
+      name: "Instagram",
+      link: "https://www.instagram.com/neveerness.to.evernesss/",
+    },
+    {
+      icon: "/icons/linkedin.png",
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/levkovich-olexandr-253688366/?isSelfProfile=true",
+    },
+    {
+      icon: "/icons/telegram.png",
+      name: "Telegram",
+      link: "https://t.me/TAM0T0",
+    },
     { icon: "/icons/twitter.png", name: "Twitter", link: "#" },
   ];
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    try {
+      await sendEMail(formData);
+      alert("Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
 
   return (
     <main
@@ -62,6 +96,7 @@ export default function GetInTouch() {
         }}
       >
         <form
+          onSubmit={handleSubmit}
           style={{
             display: "flex",
             flexDirection: "column",

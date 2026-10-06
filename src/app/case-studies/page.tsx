@@ -6,6 +6,7 @@ export default function CaseStudies() {
     title: string;
     description: string;
     image: string;
+    link: string;
     tech: string[];
     number: string;
   }[] = [
@@ -15,23 +16,17 @@ export default function CaseStudies() {
       description:
         "A Python-based game project inspired by the Beastars universe. The project focuses on interactive storytelling, character relationships and a dynamic world built around anthropomorphic animals.",
       image: "/images/beastars.png",
-      tech: ["Python", "Pygame", "OOP"],
+      link: "https://github.com/TAMOTO24/beastars-novel",
+      tech: ["Python", "Pygame", "OOP", "Game Development", "Storytelling"],
     },
     {
       number: "02",
-      title: "React Web App",
+      title: "SportLife",
       description:
         "This project was created to support those who can't always make it to the gym, offering a flexible and motivating distance training experience that fits seamlessly into any lifestyle.",
       image: "/images/SportLife.png",
-      tech: ["React", "JavaScript", "CSS"],
-    },
-    {
-      number: "03",
-      title: "Full-stack Project",
-      description:
-        "A full-stack application combining frontend and backend technologies with REST API communication and database integration.",
-      image: "/images/beastars.png",
-      tech: ["React", "Node.js", "MongoDB"],
+      link: "https://github.com/TAMOTO24/SportLife",
+      tech: ["React", "JavaScript", "CSS", "Node.js", "Socket.IO", "MongoDB", "Express.js", "WebSockets", "Antd Design"],
     },
   ];
 
@@ -312,7 +307,7 @@ export default function CaseStudies() {
                 ))}
               </div>
 
-              <button
+              <a
                 style={{
                   background: "transparent",
                   color: "whitesmoke",
@@ -324,9 +319,10 @@ export default function CaseStudies() {
                   cursor: "pointer",
                   transition: "all 0.2s ease",
                 }}
+                href={project.link}
               >
                 View details ↗
-              </button>
+              </a>
             </div>
 
             {/* Image */}
