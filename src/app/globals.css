@@ -62,17 +62,8 @@ body {
       rgba(150, 150, 170, 0.04),
       transparent 25%
     ),
-
-    /* Сетка */
-    linear-gradient(
-      rgba(255, 255, 255, 0.025) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.025) 1px,
-      transparent 1px
-    );
+    /* Сетка */ linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 
   background-size:
     100% 100%,
@@ -123,6 +114,13 @@ body {
   background: var(--blackTheme);
 }
 
+/* button:hover,
+a:hover {
+  cursor: pointer;
+  background-color: whitesmoke !important;
+  color: black !important;
+} */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -161,3 +159,38 @@ a {
     transform: translateX(-33.33%);
   }
 }
+
+.slide-in-left {
+  opacity: 0;
+  animation: 1s slideFromLeft linear both;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* .slide-in-right {
+  opacity: 0;
+  animation: slideFromRight linear;
+  animation-timeline: scroll(root block);
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */

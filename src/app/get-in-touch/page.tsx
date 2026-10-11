@@ -27,9 +27,6 @@ export default function GetInTouch() {
     const form = event.currentTarget;
 
     const formData = new FormData(event.currentTarget);
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const message = formData.get("message") as string;
 
     try {
       await sendEMail(formData);
@@ -60,6 +57,7 @@ export default function GetInTouch() {
           alignItems: "center",
           gap: "1rem",
         }}
+        className="slide-in-left"
       >
         <h1
           style={{

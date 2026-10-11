@@ -26,7 +26,17 @@ export default function CaseStudies() {
         "This project was created to support those who can't always make it to the gym, offering a flexible and motivating distance training experience that fits seamlessly into any lifestyle.",
       image: "/images/SportLife.png",
       link: "https://github.com/TAMOTO24/SportLife",
-      tech: ["React", "JavaScript", "CSS", "Node.js", "Socket.IO", "MongoDB", "Express.js", "WebSockets", "Antd Design"],
+      tech: [
+        "React",
+        "JavaScript",
+        "CSS",
+        "Node.js",
+        "Socket.IO",
+        "MongoDB",
+        "Express.js",
+        "WebSockets",
+        "Antd Design",
+      ],
     },
   ];
 
@@ -64,7 +74,7 @@ export default function CaseStudies() {
         color: "whitesmoke",
       }}
     >
-      <section style={{ marginBottom: "6rem" }}>
+      <section className="slide-in-left" style={{ marginBottom: "6rem" }}>
         {/* <div
           style={{
             fontFamily: "var(--font-plex-mono)",
@@ -320,6 +330,8 @@ export default function CaseStudies() {
                   transition: "all 0.2s ease",
                 }}
                 href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 View details ↗
               </a>
@@ -363,6 +375,27 @@ export default function CaseStudies() {
             </div>
           </article>
         ))}
+        <button
+          style={{
+            display: "block",
+            background: "transparent",
+            color: "whitesmoke",
+            border: "1px solid #444",
+            padding: "0.8rem 1.2rem",
+            borderRadius: "0.4rem",
+            fontFamily: "var(--font-plex-mono)",
+            fontSize: "0.75rem",
+            cursor: "pointer",
+            marginInline: "auto",
+            transition: "all 0.2s ease",
+          }}
+          onClick={() => {
+            window.location.href =
+              "https://github.com/TAMOTO24?tab=repositories";
+          }}
+        >
+          See More Projects ↗
+        </button>
       </section>
 
       {/* Bottom */}
