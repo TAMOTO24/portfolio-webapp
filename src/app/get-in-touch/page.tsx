@@ -281,6 +281,8 @@ export default function GetInTouch() {
                   textDecoration: "none",
                   transition: "all 0.2s ease",
                 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src={item.icon}

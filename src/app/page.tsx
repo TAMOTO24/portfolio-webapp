@@ -16,6 +16,8 @@ export default function Page() {
     { color: "#F97316", label: "MongoDB", icon: "/icons/mongodb.png" },
     { color: "#6366F1", label: "C++", icon: "/icons/c++.png" },
     { color: "#EC4899", label: "Python", icon: "/icons/python.png" },
+    { color: "#48eccee5", label: "Django", icon: "/icons/python.png" },
+    { color: "#ecd348", label: "FastAPI", icon: "/icons/python.png" },
   ];
 
   const title: { icon: string; label: string }[] = [

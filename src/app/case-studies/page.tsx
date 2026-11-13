@@ -167,6 +167,31 @@ export default function CaseStudies() {
               </div>
             </div>
           ))}
+          <a
+            href="https://drive.google.com/drive/folders/1d61cmBljdp-9JRgsKUXx3Y-lc0HKrfQd?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              style={{
+                cursor: "pointer",
+                width: "100%",
+                height: "220px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontFamily: "var(--font-plex-mono)",
+                color: "#dddddd",
+                fontSize: "1.25rem",
+                textAlign: "center",
+                border: "5px dashed #222",
+                borderRadius: "12px",
+                background: "#111",
+              }}
+            >
+              View All Projects
+            </div>
+          </a>
         </div>
 
         {/* Modal */}

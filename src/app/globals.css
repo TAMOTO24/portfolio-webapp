@@ -177,6 +177,14 @@ a {
   }
 }
 
+.iconLight {
+  color: #ffffff;
+}
+.iconLight:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
 /* .slide-in-right {
   opacity: 0;
   animation: slideFromRight linear;

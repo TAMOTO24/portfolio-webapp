@@ -37,9 +37,19 @@ export default function Header() {
             {page.label}
           </Link>
         ))}
-        <div>
-          <img src="/icons/github.png" alt="GitHub" width={50} height={50} />
-        </div>
+        <a
+          href="https://github.com/TAMOTO24"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/icons/github.png"
+            className="iconLight"
+            alt="GitHub"
+            width={50}
+            height={50}
+          />
+        </a>
       </nav>
     </header>
   );
